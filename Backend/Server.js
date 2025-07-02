@@ -3,14 +3,14 @@ const { Pool } = require('pg');
 const cors = require('cors');
 
 const app = express();
-const port = 3000;
+const port = 3077;
 
 // PostgreSQL connection
 const pool = new Pool({
   user: 'postgres',
-  host: 'localhost',
+  host: 'postgres',
   database: 'Leave',
-  password: 'Veera@0134',
+  password: 'admin834',
   port: 5432,
 });
 
@@ -259,5 +259,5 @@ app.put('/api/leave-requests/:id', async (req, res) => {
 
 app.listen(port, async () => {
   await initializeDatabase();
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at http://3.93.239.238:${port}`);
 });
