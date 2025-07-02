@@ -303,7 +303,7 @@
       
       setTimeout(() => {
         notification.style.display = "none";
-      }, 3000);
+      }, 3077);
     }
 
     function confirmAction(action, callback) {
@@ -325,7 +325,7 @@
 
     async function fetchLeaveRequests() {
       try {
-        const response = await fetch('http://localhost:3000/api/leave-requests', {
+        const response = await fetch('http://3.93.239.238:3077/api/leave-requests', {
           method: 'GET',
           headers: { 'Content-Type': 'application/json' }
         });
@@ -340,7 +340,7 @@
 
     async function updateLeaveStatus(id, status) {
       try {
-        const response = await fetch(`http://localhost:3000/api/leave-requests/${id}`, {
+        const response = await fetch(`http://3.93.239.238:3077/api/leave-requests/${id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ status })
